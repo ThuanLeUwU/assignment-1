@@ -4,7 +4,7 @@ import Menu from "./MenuComponent";
 import DishDetail from "./CostumedetailComponent";
 import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
-import { PROMOTIONS } from "../shared/promotions";
+// import { PROMOTIONS } from "../shared/promotions";
 import { LEADERS } from "../shared/leaders";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
@@ -20,7 +20,7 @@ class Main extends Component {
          dishes: DISHES,
          costumes: COSTUMES,
          comments: COMMENTS,
-         promotions: PROMOTIONS,
+         // promotions: PROMOTIONS,
          leaders: LEADERS,
       };
    }
@@ -32,11 +32,11 @@ class Main extends Component {
          return (
             <Home
                dish={this.state.dishes.filter((dish) => dish.featured)[0]}
-               promotion={
-                  this.state.promotions.filter(
-                     (promotion) => promotion.featured
-                  )[0]
-               }
+               // promotion={
+               //    this.state.promotions.filter(
+               //       (promotion) => promotion.featured
+               //    )[0]
+               // }
                leader={
                   this.state.leaders.filter((leader) => leader.featured)[0]
                }

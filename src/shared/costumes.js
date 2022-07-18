@@ -9,7 +9,8 @@ export const COSTUMES =
             size: "Xem dưới hình",
             product: "Xem dưới hình",
             featured: true,
-            price:"1.934.000 VND"
+            price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
         {
             id: 1,
@@ -21,6 +22,7 @@ export const COSTUMES =
             product: "Xem dưới hình",
             featured: false,
             price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
         {
             id: 2,
@@ -31,7 +33,8 @@ export const COSTUMES =
             size: "Xem dưới hình",
             product: "Xem dưới hình",
             featured: false,
-            price:"1.934.000 VND"
+            price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
         {
             id: 3,
@@ -42,7 +45,8 @@ export const COSTUMES =
             size: "Xem dưới hình",
             product: "Xem dưới hình",
             featured: false,
-            price:"1.934.000 VND"
+            price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
         {
             id: 4,
@@ -53,7 +57,8 @@ export const COSTUMES =
             size: "Xem dưới hình",
             product: "Xem dưới hình",
             featured: false,
-            price:"1.934.000 VND"
+            price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
         {
             id: 5,
@@ -64,6 +69,7 @@ export const COSTUMES =
             size: "Xem dưới hình",
             product: "Xem dưới hình",
             featured: false,
-            price:"1.934.000 VND"
+            price:"1.934.000 VND",
+            detail:"áo, váy, găng tay, nón, phụ kiện"
         },
     ];

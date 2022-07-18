@@ -94,11 +94,11 @@ class Contact extends Component {
                </div>
             </div>
 
-            <div className="row row-content">
+            <div className="row row-content form-feedback">
                <div className="col-12">
                   <h3>Send us your Feedback</h3>
                </div>
-               <div className="col-12 col-md-9">
+               <div className="col-12 col-md-9 ">
                   <Form onSubmit={this.handleSubmit}>
                      <FormGroup row>
                         <Label htmlFor="firstname" md={2}>First Name</Label>

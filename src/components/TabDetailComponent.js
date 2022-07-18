@@ -21,7 +21,7 @@ function TabDetailComponent({ dish }) {
                 </ul>
             </Tab>
             <Tab eventKey="profile" title="Thông tin bổ sung">
-                <big><b></b></big>
+                <strong>Sản phẩm chi tiết: {dish.detail}</strong>
             </Tab>
         </Tabs>
     );

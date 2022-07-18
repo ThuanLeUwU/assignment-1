@@ -90,3 +90,8 @@
    width: 400px;
 } */
 
+.form-feedback {
+   background-image: linear-gradient(to left, #ffffff, aqua);
+   border-radius: 30px;
+}
+
