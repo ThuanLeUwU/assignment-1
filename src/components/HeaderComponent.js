@@ -1,38 +1,74 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import {
+   Modal,
    Collapse,
    Jumbotron,
+   ModalBody,
+   ModalHeader,
    Nav,
    Navbar,
    NavbarBrand,
    NavbarToggler,
    NavItem,
+   Button,
+   Form,
+   FormGroup,
+   Label,
+   Input
 } from "reactstrap";
+
+
+import LoginComponent from "./LoginComponent";
+
+import Popup from "reactjs-popup";
+import StaticExample from "./ModalLogin";
+import ModalExample from "./ModalLogin";
 
 class Header extends Component {
    constructor(props) {
       super(props);
-
       this.toggleNav = this.toggleNav.bind(this);
       this.state = {
          isNavOpen: false,
+         isModalOpen: false
       };
+      this.toggleNav = this.toggleNav.bind(this);
+      this.toggModal = this.toggModal.bind(this);
+      this.handleLogin = this.handleLogin.bind(this);
+
    }
 
    toggleNav() {
-      this.setState({ isNavOpen: !this.state.isNavOpen });
+      this.setState({
+         isNavOpen: !this.state.isNavOpen
+      });
    }
+
+   //Login
+   toggModal() {
+      this.setState({
+         isModalOpen: !this.state.isModalOpen
+      })
+   }
+
+   handleLogin(event) {
+      this.toggleModal();
+      alert("Username: " + this.username.value + " Password: " + this.password.value
+         + " Remember: " + this.remember.checked);
+      event.preventDefault();
+   }
+
    render() {
       return (
-         <div>
-            <Navbar dark expand="md">
+         <React.Fragment>
+            <Navbar dark expand="md " fixed='top' className='nav'>
                <NavbarToggler onClick={this.toggleNav} />
                <NavbarBrand className="mr-auto" href="/">
-                  <img src="assets/images/logo.png" height="20" />
+                  <NavLink to='/'><img src="uwu.gif" height="40" /> </NavLink>
                </NavbarBrand>
-               <Collapse isOpen={this.state.isNavOpen} navbar>
-                  <Nav navbar>
+               <Collapse isOpen={this.state.isNavOpen} navbar >
+                  <Nav navbar className='ml-auto'>
                      <NavItem>
                         <NavLink className="nav-link" to="/home">
                            <span className="fa fa-home fa-lg"></span> Home
@@ -51,26 +87,38 @@ class Header extends Component {
                      <NavItem>
                         <NavLink className="nav-link" to="/contactus">
                            <span className="fa fa-address-card fa-lg"></span>{" "}
-                           Contact
+                           Feedback
                         </NavLink>
                      </NavItem>
+                     {/* <LoginComponent/> */}
                   </Nav>
+                  <Nav className='ml-auto' navbar>
+                     <NavItem>
+                        {/* <Button outline onClick={this.toggleModal}>
+                           <span className="fa fa-sign-in fa-lg">Login
+                           </span>
+                           <StaticExample/>
+                           </Button> */}
+                        {/* <LoginComponent/> */}
+                        <ModalExample/>
+                        {/* <Popup modal trigger={<button><span className="fa fa-sign-in fa-lg"></span>Login</button>}>
+                           Modal Content
+                        </Popup> */}
+                     </NavItem>
+                  </Nav>
+                  {/* <LoginComponent/> */}
                </Collapse>
             </Navbar>
+            {/* <LoginComponent/> */}
             <Jumbotron>
-               <div className="container">
+               <div className="container ">
                   <div className="row row-header">
                      <div className="col-12 col-sm-6">
-                        <h1>Ristorante con Fusion</h1>
-                        <p>
-                           We take inspiration from the World's best
-                           cuisines,and createaunique fusion experience
-                        </p>
                      </div>
                   </div>
                </div>
             </Jumbotron>
-         </div>
+         </React.Fragment>
       );
    }
 }

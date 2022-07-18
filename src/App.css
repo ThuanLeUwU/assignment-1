@@ -14,21 +14,79 @@
    min-height: 400px;
 }
 .footer {
-   background-color: #d1c4e9;
+   background-color: #FFCCFF;
    margin: 0px auto;
    padding: 20px 0px 20px 0px;
 }
 .jumbotron {
-   padding: 70px 30px 70px 30px;
-   margin: 0px auto;
-   background-color: #9575cd !important;
-   color: floralwhite;
+   /* padding: 70px 30px 70px 30px;
+   margin: 0px auto; */
+   /* background-color: #9575cd !important; */
+   background-image: url(/public/assets/images/jump.jpg) ;
+   background-size: 100% 500px ;
+   background-repeat: no-repeat; 
+   /* color: floralwhite; */
+   height: 500px;
+   border-image-width: 100%;
 }
-address {
+.address {
    font-size: 80%;
    margin: 0px;
    color: #0f0f0f;
 }
 .navbar-dark {
-   background-color: #512da8;
+   background-color: #0f0f0f;
 }
+/* .main{
+   background-image: url(/public/assets/images/12214.jpg);
+   background-size: 100%;
+} */
+
+.nav{
+   opacity: 0.8;
+}
+
+.nav:hover {
+   opacity: 1.0;
+}
+
+.header-jum{
+   height: 50%;
+}
+/* .container{
+   background-color: #66FFFF;
+} */
+
+
+.top-login.no-background{
+   margin-left: 0;
+   padding-left: 0;
+   padding-bottom: 0;
+   background: transparent;
+}
+
+.top-login {
+   display: inline-block;
+   /* float: left; */
+   position: relative;
+   margin-left: 10px;
+   padding-left: 15px;
+   padding-bottom: 2px;
+   background: rgba(0,0,0,0.1);
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+.login-button{
+   border-radius: 30%;
+}
+
+.text-title {
+   /* color: #FFCCFF; */
+}
+
+/* .card-img{
+   height: 400px;
+   width: 400px;
+} */
+

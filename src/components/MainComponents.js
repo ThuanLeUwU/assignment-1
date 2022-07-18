@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./MenuComponent";
-import DishDetail from "./DishdetailComponent";
+import DishDetail from "./CostumedetailComponent";
 import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
 import { PROMOTIONS } from "../shared/promotions";
@@ -12,11 +12,13 @@ import Home from "./HomeComponent";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Contact from "./ContactComponent";
 import About from "./AboutusComponents";
+import { COSTUMES } from "../shared/costumes";
 class Main extends Component {
    constructor(props) {
       super(props);
       this.state = {
          dishes: DISHES,
+         costumes: COSTUMES,
          comments: COMMENTS,
          promotions: PROMOTIONS,
          leaders: LEADERS,
@@ -45,7 +47,7 @@ class Main extends Component {
          return (
             <DishDetail
                dish={
-                  this.state.dishes.filter(
+                  this.state.costumes.filter(
                      (dish) => dish.id === parseInt(match.params.dishId, 10)
                   )[0]
                }
@@ -57,7 +59,7 @@ class Main extends Component {
          );
       };
       return (
-         <div>
+         <div className='main'>
             <Header />
             {/* <Menu
                dishes={this.state.dishes}
@@ -73,7 +75,7 @@ class Main extends Component {
                <Route
                   exact
                   path="/menu"
-                  component={() => <Menu dishes={this.state.dishes} />}
+                  component={() => <Menu costumes={this.state.costumes} />}
                />
                <Route exact path="/contactus" component={Contact} />
                <Route
