@@ -13,6 +13,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import Contact from "./ContactComponent";
 import About from "./AboutusComponents";
 import { COSTUMES } from "../shared/costumes";
+import { FEEDBACKS } from "../shared/feedback";
 class Main extends Component {
    constructor(props) {
       super(props);
@@ -22,6 +23,7 @@ class Main extends Component {
          comments: COMMENTS,
          // promotions: PROMOTIONS,
          leaders: LEADERS,
+         feedbacks:FEEDBACKS,
       };
    }
    // onDishSelect(dishId) {
@@ -31,14 +33,14 @@ class Main extends Component {
       const HomePage = () => {
          return (
             <Home
-               dish={this.state.dishes.filter((dish) => dish.featured)[0]}
+               // dish={this.state.dishes.filter((dish) => dish.featured)[0]}
                // promotion={
                //    this.state.promotions.filter(
                //       (promotion) => promotion.featured
                //    )[0]
                // }
                leader={
-                  this.state.leaders.filter((leader) => leader.featured)[0]
+                  this.state.feedbacks
                }
             />
          );

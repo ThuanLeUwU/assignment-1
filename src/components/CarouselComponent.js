@@ -3,18 +3,18 @@ import Carousel from 'better-react-carousel'
 
 const Gallery = () => {
   return (
-    <Carousel cols={1} rows={1} gap={1} loop autoplay={3000}>
+    <Carousel cols={1} rows={1} gap={1} loop={2000} autoplay={2000}>
       <Carousel.Item>
-        <img width="100%" src="/assets/images/kizuna.jpg" />
+        <img width="100%" src="/assets/images/carousel1.png" />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="100%" src="/assets/images/tieunhu.jpg" />
+        <img width="100%" src="/assets/images/carousel2.png" />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="100%" src="/assets/images/saraphine.jpg" />
+        <img width="100%" src="/assets/images/carousel3.png" />
       </Carousel.Item>
       <Carousel.Item>
-        <img width="100%" src="/assets/images/mine.jpg" />
+        <img width="100%" src="/assets/images/carousel4.png" />
       </Carousel.Item>
     </Carousel>
   )

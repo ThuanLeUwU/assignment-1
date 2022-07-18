@@ -64,8 +64,11 @@ class Header extends Component {
          <React.Fragment>
             <Navbar dark expand="md " fixed='top' className='nav'>
                <NavbarToggler onClick={this.toggleNav} />
+               <img src="uwu.gif" height="40" />
                <NavbarBrand className="mr-auto" href="/">
-                  <NavLink to='/'><img src="uwu.gif" height="40" /> </NavLink>
+               
+               <NavLink className="fw-bold fs-4 me-2 text-decoration-none" to="/" ><b>YCStore</b></NavLink>
+                  {/* <NavLink to='/'><img src="uwu.gif" height="40" /><b>YCStore</b></NavLink> */}
                </NavbarBrand>
                <Collapse isOpen={this.state.isNavOpen} navbar >
                   <Nav navbar className='ml-auto'>

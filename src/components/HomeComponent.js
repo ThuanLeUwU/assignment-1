@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import AccordionComponent from "./AccordionComponent";
 import Gallery from "./CarouselComponent";
+import CarouselFeedback from "./CarouselFeedback";
 
 function RenderCarousel() {
    return (
@@ -17,16 +18,13 @@ function RenderCarousel() {
    );
 }
 
-function RenderCard({item}) {
+function RenderFeedback({item}) {
    return(
       <Card>
-         <CardImg src={item.image} alt={item.name} />
+         <CardImg src={item.image}/>
          <CardBody>
-            <CardTitle>{item.name}</CardTitle>
-            {item.designation ? (
-               <CardSubtitle>{item.designation}</CardSubtitle>
-            ) : null}
-            <CardText>{item.description}</CardText>
+            <CardTitle>{item.feedback}</CardTitle>
+            <CardText>{item.address}</CardText>
          </CardBody>
       </Card>
    );
@@ -47,7 +45,7 @@ function Home(props) {
             </div>
          </div> */}
          <RenderCarousel/>
-         <AccordionComponent/>
+         {/* <AccordionComponent/> */}
          {/* <div className="row align-items-start">
             <div className="col-12 col-md m-1">
                <RenderCard item={props.dish} />
@@ -59,6 +57,8 @@ function Home(props) {
                <RenderCard item={props.leader} />
             </div>
          </div> */}
+         {/* <RenderFeedback item={props.leader}/> */}
+         {/* <CarouselFeedback/> */}
       </div>
    );
 }

@@ -99,10 +99,13 @@ class DishDetail extends Component {
                         </FormGroup>
                         <FormGroup row>
                            <Col md={{ size: 10, }}>
-                              <Button type="" color="primary" >
+                              <Button type="" color="primary" className="">
                                  Thêm vào giỏ hàng
                               </Button>
-                              <Button type="submit" color="success" >
+                              <Button type="" color="info" className="m-2">
+                                 Thuê ngay
+                              </Button>
+                              <Button type="submit" color="success">
                                  Mua ngay
                               </Button>
                               {/* <ModalExample /> */}
