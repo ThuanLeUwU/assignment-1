@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
    Card,
    CardImg,
@@ -28,29 +28,9 @@ function RenderDish({ dish }) {
       </div>
    );
 }
-export function RenderComments({ comments }) {
-   const comment = comments.map((item) => {
-      return (
-         <div>
-            <ul>
-               <li>
-                  <h5>{item.comment}</h5>
-               </li>
-            </ul>
-            <p>
-               <span className="font-weight-bold">{item.author}</span> -{" "}
-               {item.date}
-            </p>
-         </div>
-      );
-   });
-   return (
-      <div className="col-12 col-sm-7">
-         <h2>comments</h2>
-         {comment}
-      </div>
-   );
-}
+
+
+
 
 class DishDetail extends Component {
    constructor(props) {
@@ -101,13 +81,8 @@ class DishDetail extends Component {
                            <Col md={{ size: 10, }}>
                               <Button type="" color="primary" className="">
                                  Thêm vào giỏ hàng
-                              </Button>
-                              <Button type="" color="info" className="m-2">
-                                 Thuê ngay
-                              </Button>
-                              <Button type="submit" color="success">
-                                 Mua ngay
-                              </Button>
+                              </Button>         
+                              <NavLink to='/payment' className='btn btn-success m-2'>Payment orders</NavLink>
                               {/* <ModalExample /> */}
                            </Col>
                         </FormGroup>

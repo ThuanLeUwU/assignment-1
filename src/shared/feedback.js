@@ -8,7 +8,7 @@ export const FEEDBACKS=[
     {
         id:1,
         feedback:"Chất lượng tuyệt vời, nhanh chóng. Tôi rất thích ♥.",
-        image:"/assets/images/hutaofeedback.png",
+        image:"/assets/images/feedbackhutao.png",
         adress:"TP. Vũng Tàu"
     },
     {

@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./MenuComponent";
 import DishDetail from "./CostumedetailComponent";
-import { DISHES } from "../shared/dishes";
-import { COMMENTS } from "../shared/comments";
-// import { PROMOTIONS } from "../shared/promotions";
-import { LEADERS } from "../shared/leaders";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
@@ -14,15 +10,15 @@ import Contact from "./ContactComponent";
 import About from "./AboutusComponents";
 import { COSTUMES } from "../shared/costumes";
 import { FEEDBACKS } from "../shared/feedback";
+import PaymentDetail from "./PaymentComponent";
+import Payment from "./PaymentComponent";
+// import Cart from "./CarouselComponent";
 class Main extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         dishes: DISHES,
          costumes: COSTUMES,
-         comments: COMMENTS,
          // promotions: PROMOTIONS,
-         leaders: LEADERS,
          feedbacks:FEEDBACKS,
       };
    }
@@ -33,13 +29,7 @@ class Main extends Component {
       const HomePage = () => {
          return (
             <Home
-               // dish={this.state.dishes.filter((dish) => dish.featured)[0]}
-               // promotion={
-               //    this.state.promotions.filter(
-               //       (promotion) => promotion.featured
-               //    )[0]
-               // }
-               leader={
+               feedbacks={
                   this.state.feedbacks
                }
             />
@@ -52,14 +42,23 @@ class Main extends Component {
                   this.state.costumes.filter(
                      (dish) => dish.id === parseInt(match.params.dishId, 10)
                   )[0]
-               }
-               comments={this.state.comments.filter(
-                  (comment) =>
-                     comment.dishId === parseInt(match.params.dishId, 10)
-               )}
+               }               
             />
          );
       };
+
+      const PaymentId = ({match}) => {
+         return (
+            <PaymentDetail 
+            dish={
+               this.state.costumes.filter(
+                  (dish) => dish.id === parseInt(match.params.dishId, 10)
+               )[0]
+            }
+            />
+         )
+      }
+
       return (
          <div className='main'>
             <Header />
@@ -83,10 +82,12 @@ class Main extends Component {
                <Route
                   exact
                   path="/aboutus"
-                  component={() => <About leaders={this.state.leaders} />}
+                  component={() => <About />}
                />
                <Route path="/menu/:dishId" component={DishWithId} />
+               <Route path="/payment"  component={() => <Payment/>}/>
                <Redirect to="/home" />
+
             </Switch>
             <Footer />
          </div>

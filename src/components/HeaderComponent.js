@@ -24,6 +24,7 @@ import LoginComponent from "./LoginComponent";
 import Popup from "reactjs-popup";
 import StaticExample from "./ModalLogin";
 import ModalExample from "./ModalLogin";
+import CartButton from "./CartButtons";
 
 class Header extends Component {
    constructor(props) {
@@ -107,6 +108,9 @@ class Header extends Component {
                         {/* <Popup modal trigger={<button><span className="fa fa-sign-in fa-lg"></span>Login</button>}>
                            Modal Content
                         </Popup> */}
+                     </NavItem>
+                     <NavItem>
+                        {/* <CartButton/> */}
                      </NavItem>
                   </Nav>
                   {/* <LoginComponent/> */}

@@ -144,32 +144,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media, CardImg, CardText, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function About(props) {
-
-    const leaders = props.leaders.map((leader) => {
-        return (
-            <div className="row">
-                <div className=" col-12 col-sm-4">
-                    <div className=" col-12 col-sm-7 offset-1">
-                        <CardImg top src={leader.image} alt={leader.name} />
-                    </div>
-                    <div className=" col-12 col-sm-5">
-
-                    </div>
-                </div>
-                <div className=" col-12 col-sm-8">
-                    <div className=" col-12 col-sm-9">
-                        <CardBody>
-                            <CardTitle>{leader.name}</CardTitle>
-                            <CardText>{leader.description}</CardText>
-                        </CardBody>
-                    </div>
-                    <div className=" col-12 col-sm-3">
-                    </div>
-                </div>
-            </div>
-        );
-    });
+const About = () => {
 
     return (
         <div className="container">

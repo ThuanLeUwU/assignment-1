@@ -88,10 +88,10 @@ class Contact extends Component {
                   </BreadcrumbItem>
                   <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                </Breadcrumb>
-               <div className="col-12">
+               {/* <div className="col-12">
                   <h3>Menu</h3>
                   <hr />
-               </div>
+               </div> */}
             </div>
 
             <div className="row row-content form-feedback">
